@@ -1,7 +1,7 @@
 'use strict';
 var expect = require('chai').expect;
 
-function countAdjacentPairs(searchString) {
+function countAdjacentPairs(s) {
     return s.toLowerCase().split(' ').reduce((n, current, i, arr) => (arr[i - 1] === current && current != n[1] ? [n[0] + 1, current] : [n[0], null] ), [0, null])[0];
 }
 
